@@ -22,4 +22,15 @@ chances = 3
 while chances  > 0:
     wrong_guess  = 0
     for ch in random_guess:
+        if ch in user_guesses:
+            print(ch, end=" ")
+        else: 
+            print('*', end=" ") # placeholder for letters not guessed
+            wrong_guess += 1
+        if wrong_guess == 0:
+            print('/nCongratulations you guessed correctly:', random_guess)
+            break
+        guess  = input('\nGuess a letter or the entire word: ')
+        user_guesses += guess
+      
       
